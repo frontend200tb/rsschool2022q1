@@ -30,7 +30,6 @@ html {
 .container {
   margin: 0 auto;
   max-width: 1280px;
-  outline: 1px dashed red;
 }
 
 .title {
@@ -40,7 +39,6 @@ html {
   font-size: 3.5rem;
   line-height: 130%;
   letter-spacing: 0.06em;
-  color: var(--dark-l);
 }
 
 
@@ -183,7 +181,6 @@ ABOUT
   justify-content: space-between;
   align-items: center;
   margin: 0 40px 100px 40px;
-  outline: 1px dotted green;
 }
 
 .about-content-img {
@@ -205,6 +202,7 @@ ABOUT
 .about-title {
   width: 370px;
   text-align: left;
+  color: var(--dark-l);
 }
 
 .about-text {
@@ -228,13 +226,13 @@ PETS
   margin: 0 40px 100px 40px;
   width: 1200px;
   height: 697px;
-  outline: 1px dotted green;
 }
 
 .pets-title {
   margin: 0 auto;
   width: 400px;
   text-align: center;
+  color: var(--dark-l);
 }
 
 .slider {
@@ -315,13 +313,13 @@ HELP
   margin: 0 40px 100px 40px;
   width: 1200px;
   height: 431px;
-  outline: 1px dotted green;
 }
 
 .help-title {
   margin: 0 auto;
   width: 308px;
   text-align: center;
+  color: var(--dark-l);
 }
 
 .help-list {
@@ -365,7 +363,6 @@ DONATION
   margin: 0 auto 100px;
   width: 915px;
   height: 282px;
-  outline: 1px dotted green;
 }
 
 .donation-content-text {
@@ -373,6 +370,10 @@ DONATION
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
+}
+
+.donation {
+  color: var(--dark-l);
 }
 
 .subtitle {
@@ -412,10 +413,45 @@ DONATION
 FOOTER
 ****************/
 .footer {
-  padding-top: 80px;
-  height: 462px;
+  padding-top: 40px;
+  height: 350px;
   background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
   linear-gradient(0deg, #211F20, #211F20);
-  
 }
 
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 158px;
+  align-items: center;
+  margin: 0 auto;
+  width: 1200px;
+  height: 310px;
+}
+
+.footer-title {
+  color: var(--light-l);
+}
+
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 234px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+.contact-text {
+  margin-left: 20px;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  letter-spacing: 0.06em;
+  color: var(--primary);
+}
