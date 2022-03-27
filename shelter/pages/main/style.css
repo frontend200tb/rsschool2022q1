@@ -111,7 +111,13 @@ HEADER
 
 .nav-li a.active {
   border-bottom: 3px solid var(--primary);
+  color: var(--light-s);
 }
+
+.nav-li a:hover {
+  color: var(--light-s);
+}
+
 
 /****************
 START
