@@ -351,9 +351,71 @@ HELP
 DONATION
 ****************/
 .donation {
+  padding-top: 80px;
+  height: 462px;
   background-color: var(--light-l);
 }
 
 .donation-content {
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
+  margin: 0 auto 100px;
+  width: 915px;
+  height: 282px;
+  outline: 1px dotted green;
 }
+
+.donation-content-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  line-height: 110%;
+  color: var(--dark-l);
+}
+
+.credit-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 349px;
+  height: 43px;
+  border-radius: 9px;
+  background-color: var(--primary);
+}
+
+.credit-card-text {
+  font-size: 2rem;
+  line-height: 115%;
+  letter-spacing: 0.06em;  
+  color: var(--dark-l);
+}
+
+.donation-info {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: var(--dark-m);
+}
+
+
+/****************
+FOOTER
+****************/
+.footer {
+  padding-top: 80px;
+  height: 462px;
+  background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+  linear-gradient(0deg, #211F20, #211F20);
+  
+}
+
