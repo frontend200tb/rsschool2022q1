@@ -15,12 +15,12 @@ html {
   --primary: #F1CDB3;
   --light-xl: #fff;
   --light-s: #fafafa;
-  --light-1: #F6F6F6;
+  --light-l: #F6F6F6;
   --dark-3xl: #292929;
   --dark-xl: #4C4C4C;
+  --dark-l: #545454;
   --dark-m: #B2B2B2;
   --dark-s: #CDCDCD;
-  --dark-1: #545454;
   --dark-0: #000;
   --start-bg: #211F20;
   --start-gradient1: #5B483A;
@@ -121,6 +121,8 @@ START
 
 .h1 {
   margin-bottom: 42px;
+  width: 310px;
+  font-weight: 400;
   font-size: 4.4rem;
   line-height: 130%;
   color: var(--light-xl);
@@ -158,17 +160,71 @@ START
 /****************
 ABOUT
 ****************/
+.about {
+  height: 588px;
+}
+
 .about-content {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  background-color: #555;
+  justify-content: space-between;
+  align-items: center;
+  margin: 80px 40px 100px 40px;
+  background-color: var(--light-xl);
 }
 
 .about-content-img {
-
+  display: block;
+  margin-left: 175px;
+  width: 300px;
+  height: 408px;
 }
 
 .about-content-text {
-  
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-right: 175px;
+  width: 430px;
+  height: 380px;
+}
+
+.title {
+  width: 370px;
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: var(--dark-l);
+}
+
+.about-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  color: var(--dark-xl);
+}
+
+
+/****************
+PETS
+****************/
+.pets-content {
+  background-color: var(--light-l);
+}
+
+
+/****************
+HELP
+****************/
+.help-content {
+  background-color: var(--light-xl);
+}
+
+
+/****************
+DONATION
+****************/
+.donation-content {
+  background-color: var(--light-l);
 }
