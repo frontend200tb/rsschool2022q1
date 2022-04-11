@@ -67,31 +67,35 @@ HEADER
 
 .logo-title {
   padding-bottom: 10px;
-  font-weight: normal;
+  width: 186px;
+  font-family: Georgia, Times, serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: 3.2rem;
   line-height: 110%;
   letter-spacing: 0.06em;
+  text-align: right;
   color: var(--dark-l);
   text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000, 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .logo-subtitle {
+  width: 184px;
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 1.3rem;
   line-height: 1.5rem;
   letter-spacing: 0.1em;
+  text-align: right;
   color: var(--dark-3xl);
 }
 
 .nav-ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 35px;
-  width: 445px;
+  justify-content: end;
+  column-gap: 35px;
 }
 
 .nav-li {
@@ -99,7 +103,6 @@ HEADER
 }
 
 .nav-li a {
-  padding-bottom: 3px;
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -129,7 +132,7 @@ PETS
 }
 
 .pets-content {
-  margin: 0 40px 100px 40px;
+  margin: 0 auto;
   width: 1200px;
   height: 1162px;
 }
@@ -149,24 +152,15 @@ PETS
   flex-wrap: wrap;
   gap: 30px 40px;
   margin: 45px 0;
-}
-
-.pets-btn {
-  display: block;
-  margin: 0 auto;
-  width: 261px;
-  height: 52px;
-  border: none;
-  font-family: Georgia, serif;
-  font-size: 1.7rem;
-  line-height: 130%;
-  letter-spacing: 0.06em;
-  border-radius: 100px;
-  color: var(--dark-3xl);
-  background-color: var(--primary);
+  padding: 15px 0;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  row-gap: 30px;
   width: 270px;
   height: 435px;
   border-radius: 9px;
@@ -183,10 +177,9 @@ PETS
 }
 
 .card-name {
-  margin: 30px auto;
   font-size: 2rem;
   line-height: 2.3rem;
-  text-align: center;
+  letter-spacing: 0.06em;
   color: var(--dark-l);
 }
 
@@ -195,6 +188,10 @@ PETS
   margin: 0 auto;
   width: 187px;
   height: 52px;
+  font-family: Georgia, serif;
+  font-size: 1.7rem;
+  line-height: 130%;
+  letter-spacing: 0.06em;
   border: 2px solid var(--primary);
   border-radius: 100px;
   background-color: var(--light-s);
@@ -249,22 +246,23 @@ FOOTER
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 158px;
-  align-items: center;
   margin: 0 auto;
   width: 1200px;
   height: 310px;
-}
-
-.footer-title {
-  color: var(--light-l);
 }
 
 .footer-contacts {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-top: 16px;
   height: 234px;
+  max-width: 300px;
+}
+
+.footer-title {
+  width: 280px;
+  color: var(--light-l);
 }
 
 .contact {
@@ -283,3 +281,4 @@ FOOTER
   letter-spacing: 0.06em;
   color: var(--primary);
 }
+
