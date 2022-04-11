@@ -52,6 +52,13 @@ HEADER
   height: 120px;
 }
 
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--light-xl);
+}
+
 .header-content {
   display: flex;
   flex-direction: row;
@@ -61,8 +68,10 @@ HEADER
 }
 
 .logo {
+  display: block;
   width: 190px;
   height: 60px;
+  text-decoration: none;
 }
 
 .logo-title {
@@ -170,6 +179,7 @@ PETS
 
 .card:hover {
   box-shadow: 0px 2px 35px 14px #0D0D0D0A;
+  background-color: var(--light-xl);
 }
 
 .card-img {
@@ -195,6 +205,11 @@ PETS
   border: 2px solid var(--primary);
   border-radius: 100px;
   background-color: var(--light-s);
+  cursor: pointer;
+}
+
+.card:hover > .card-btn {
+  background-color: var(--primary);
 }
 
 .card-nav {
@@ -222,12 +237,15 @@ PETS
   background-color: var(--primary);
 }
 
-.inactive {
+.arrow[disabled] {
   color: var(--dark-s);
   border: 2px solid var(--dark-s);
+  cursor: auto;
+  background-color: transparent;
 }
 
 .pagination {
+  cursor: auto;
   background-color: var(--primary);
 }
 

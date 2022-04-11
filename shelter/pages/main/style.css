@@ -311,6 +311,7 @@ PETS
 
 .card:hover {
   box-shadow: 0px 2px 35px 14px #0D0D0D0A;
+  background-color: var(--light-xl);
 }
 
 .card-img {
