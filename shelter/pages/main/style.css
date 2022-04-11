@@ -336,6 +336,11 @@ PETS
   border: 2px solid var(--primary);
   border-radius: 100px;
   background-color: var(--light-s);
+  cursor: pointer;
+}
+
+.card:hover > .card-btn {
+  background-color: var(--primary);
 }
 
 .pets-btn {
