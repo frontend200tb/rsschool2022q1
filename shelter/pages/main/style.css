@@ -343,14 +343,7 @@ PETS
   justify-content: space-between;
   align-items: center;
   margin: 60px 0;
-}
-
-.slider {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 990px;
+  background-color: #999;
 }
 
 .arrow {
@@ -373,6 +366,21 @@ PETS
 
 .arrow-right {
   background-image: url(../../assets/svg/arrow-right.svg);
+}
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 990px;
+}
+
+@media (max-width: 1279px) {
+  .slider {
+    margin: 0 12px;
+    width: 580px;
+  }
 }
 
 .card {
@@ -421,6 +429,16 @@ PETS
 
 .card:hover > .card-btn {
   background-color: var(--primary);
+}
+
+.card3 {
+  display: block;
+}
+
+@media (max-width: 1279px) {
+  .card3 {
+    display: none;
+  }
 }
 
 .pets-btn {
