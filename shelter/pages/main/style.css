@@ -32,23 +32,20 @@ html {
 .container {
   margin: 0 auto;
   padding: 0 40px;
-  width: 1280px;
-  /* outline: 2px solid green; */
+  max-width: 1280px;
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {
   .container {
     padding: 0 30px;
     width: 100%;
-    /* outline: 2px solid red; */
   }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .container {
     width: 100%;
     padding: 0 30px;
-    /* outline: 2px solid blue; */
   }
 }
 
@@ -168,7 +165,6 @@ START
   row-gap: 100px;
   margin: 0 auto;
   padding-top: 60px;
-  height: 728px;
 }
 
 @media (max-width: 1279px) {
@@ -614,7 +610,7 @@ DONATION
 FOOTER
 ****************/
 .footer {
-  padding: 40px 40px 0 40px;
+  padding-top: 40px;
   height: 350px;
   background-image: url(../../assets/images/footer-gradient-background.png);
   background-size: cover;
@@ -673,12 +669,6 @@ FOOTER
   justify-content: space-between;
   height: 234px;
   width: 302px;
-}
-
-@media (max-width: 1279px) {
-  .footer-contacts {
-    margin-top: 0;
-  }
 }
 
 .footer-title {

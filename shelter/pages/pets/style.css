@@ -31,7 +31,22 @@ html {
 
 .container {
   margin: 0 auto;
+  padding: 0 40px;
   max-width: 1280px;
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .container {
+    padding: 0 30px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .container {
+    padding: 0 30px;
+    width: 100%;
+  }
 }
 
 .title {
@@ -64,7 +79,6 @@ HEADER
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 0 40px;
 }
 
 .logo {
@@ -85,7 +99,6 @@ HEADER
   letter-spacing: 0.06em;
   text-align: right;
   color: var(--dark-l);
-  text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000, 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .logo-subtitle {
@@ -103,15 +116,20 @@ HEADER
 .nav-ul {
   display: flex;
   flex-direction: row;
-  justify-content: end;
-  column-gap: 35px;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 36px;
+  margin-top: -3px;
+  width: 445px;
+  height: 27px;
 }
 
 .nav-li {
   list-style: none;
 }
 
-.nav-li a {
+.nav-a {
+  padding-bottom: 4px;
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -121,12 +139,12 @@ HEADER
   text-decoration: none;
 }
 
-.nav-li a.active {
+.nav-a.active {
   border-bottom: 3px solid var(--primary);
   color: var(--dark-3xl);
 }
 
-.nav-li a:hover {
+.nav-a:hover {
   color: var(--dark-3xl);
 }
 
@@ -140,10 +158,23 @@ PETS
   background-color: var(--light-l);
 }
 
+@media (max-width: 1279px) {
+  .pets {
+    padding-top: 60px;
+    height: 1733px;
+  }
+}
+
 .pets-content {
   margin: 0 auto;
-  width: 1200px;
   height: 1162px;
+}
+
+@media (max-width: 1279px) {
+  .pets-content {
+    padding-top: 20px;
+    height: 1603px;
+  }
 }
 
 .pets-title {
@@ -164,6 +195,15 @@ PETS
   padding: 15px 0;
 }
 
+@media (max-width: 1279px) {
+  .cards-container {
+    margin: 30px auto 40px;
+    padding: 0;
+    width: 580px;
+    height: 1365px;
+  }
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -180,6 +220,12 @@ PETS
 .card:hover {
   box-shadow: 0px 2px 35px 14px #0D0D0D0A;
   background-color: var(--light-xl);
+}
+
+@media (max-width: 1279px) {
+  .card3 {
+    display: none;
+  }
 }
 
 .card-img {
@@ -224,8 +270,11 @@ PETS
 .arrow {
   width: 52px;
   height: 52px;
-  font-size: 2rem;
-  line-height: 2.3rem;
+  font-family: Georgia, Times, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.0rem;
+  line-height: 115%;
   letter-spacing: 0.06em;
   border: 2px solid var(--primary);
   border-radius: 100%;
@@ -256,26 +305,63 @@ FOOTER
 .footer {
   padding-top: 40px;
   height: 350px;
-  background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
-  linear-gradient(0deg, #211F20, #211F20);
+  background-image: url(../../assets/images/footer-gradient-background.png);
+  background-size: cover;
+}
+
+@media (max-width: 1279px) {
+  .footer {
+    padding: 30px 30px 0 30px;
+    height: 639px;
+  }
 }
 
 .footer-content {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin: 0 auto;
-  width: 1200px;
-  height: 310px;
+  justify-content: flex-start;
+  column-gap: 160px;
+}
+
+@media (max-width: 1279px) {
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 65px;
+  }
 }
 
 .footer-contacts {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  column-gap: 160px;
+  padding-top: 16px;
+  height: 234px;
+}
+
+@media (max-width: 1279px) {
+  .footer-contacts {
+    padding-top: 0;
+    column-gap: 60px;
+  }
+}
+
+.footer-contacts-left {
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 16px;
   height: 234px;
-  max-width: 300px;
+  width: 278px;
+}
+
+.footer-contacts-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 234px;
+  width: 302px;
 }
 
 .footer-title {
@@ -300,3 +386,8 @@ FOOTER
   color: var(--primary);
 }
 
+.footer-img {
+  display: block;
+  width: 300px;
+  height: 310px;
+}
