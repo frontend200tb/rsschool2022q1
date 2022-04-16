@@ -36,7 +36,7 @@ html {
   /* outline: 2px solid green; */
 }
 
-@media (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1279px) {
   .container {
     padding: 0 30px;
     width: 100%;
@@ -529,22 +529,39 @@ DONATION
   background-color: var(--light-l);
 }
 
+@media (max-width: 1279px) {
+  .donation {
+    height: 783px;
+  }
+}
+
 .donation-content {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 30px;
+  column-gap: 30px;
   align-items: center;
-  margin: 0 auto;
-  width: 915px;
-  height: 282px;
+}
+
+@media (max-width: 1279px) {
+  .donation-content {
+    flex-direction: column-reverse;
+    row-gap: 60px;
+  }
+}
+
+.donation-content-img {
+  width: 505px;
+  height: 261px;
 }
 
 .donation-content-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  row-gap: 20px;
+  width: 380px;
+  height: 282px;
 }
 
 .donation {
