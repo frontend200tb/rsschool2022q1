@@ -36,7 +36,7 @@ html {
   /* outline: 2px solid green; */
 }
 
-@media (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1279px) {
   .container {
     padding: 0 30px;
     width: 100%;
@@ -461,6 +461,8 @@ HELP
 
 @media (max-width: 1279px) {
   .help {
+    margin: 0 auto;
+    width: 768px;
     height: 779px;
   }
 }
@@ -529,22 +531,39 @@ DONATION
   background-color: var(--light-l);
 }
 
+@media (max-width: 1279px) {
+  .donation {
+    height: 783px;
+  }
+}
+
 .donation-content {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 30px;
+  column-gap: 30px;
   align-items: center;
-  margin: 0 auto;
-  width: 915px;
-  height: 282px;
+}
+
+@media (max-width: 1279px) {
+  .donation-content {
+    flex-direction: column-reverse;
+    row-gap: 60px;
+  }
+}
+
+.donation-content-img {
+  width: 505px;
+  height: 261px;
 }
 
 .donation-content-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  row-gap: 20px;
+  width: 380px;
+  height: 282px;
 }
 
 .donation {
@@ -595,28 +614,71 @@ DONATION
 FOOTER
 ****************/
 .footer {
-  padding-top: 40px;
+  padding: 40px 40px 0 40px;
   height: 350px;
-  background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
-  linear-gradient(0deg, #211F20, #211F20);
+  background-image: url(../../assets/images/footer-gradient-background.png);
+  background-size: cover;
+}
+
+@media (max-width: 1279px) {
+  .footer {
+    padding: 30px 30px 0 30px;
+    height: 639px;
+  }
 }
 
 .footer-content {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  height: 310px;
+  justify-content: flex-start;
+  column-gap: 160px;
+}
+
+@media (max-width: 1279px) {
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 65px;
+  }
 }
 
 .footer-contacts {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  column-gap: 160px;
+  padding-top: 16px;
+  height: 234px;
+}
+
+@media (max-width: 1279px) {
+  .footer-contacts {
+    padding-top: 0;
+    column-gap: 60px;
+  }
+}
+
+.footer-contacts-left {
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 16px;
   height: 234px;
-  max-width: 300px;
+  width: 278px;
+}
+
+.footer-contacts-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 234px;
+  width: 302px;
+}
+
+@media (max-width: 1279px) {
+  .footer-contacts {
+    margin-top: 0;
+  }
 }
 
 .footer-title {
@@ -643,4 +705,6 @@ FOOTER
 
 .footer-img {
   display: block;
+  width: 300px;
+  height: 310px;
 }
