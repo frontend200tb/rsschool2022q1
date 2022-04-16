@@ -66,7 +66,7 @@ html {
 START SCREEN
 ****************/
 .start-screen {
-  padding-top: 61px;
+  padding-top: 60px;
   height: 908px;
   background-image: url(../../assets/images/start-screen-gradient-background.png);
   background-size: cover;
@@ -87,6 +87,7 @@ HEADER
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   outline: 2px solid black;
 }
 
@@ -127,8 +128,9 @@ HEADER
   justify-content: flex-end;
   align-items: center;
   column-gap: 36px;
-  height: 60px;
   margin-top: -3px;
+  width: 445px;
+  height: 27px;
 }
 
 .nav-li {
@@ -266,16 +268,29 @@ ABOUT
   background-color: var(--light-xl);
 }
 
+@media (max-width: 1279px) {
+  .about {
+    height: 1048px;
+  }
+}
+
 .about-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 0 175px;
+}
+
+@media (max-width: 1279px) {
+  .about-content {
+    flex-direction: column-reverse;
+    row-gap: 80px;
+  }
 }
 
 .about-content-img {
   display: block;
-  margin-left: 175px;
   width: 300px;
   height: 408px;
 }
@@ -284,7 +299,6 @@ ABOUT
   display: flex;
   flex-direction: column;
   gap: 25px;
-  margin-right: 175px;
   width: 430px;
   height: 380px;
 }
