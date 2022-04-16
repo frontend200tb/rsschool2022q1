@@ -31,7 +31,25 @@ html {
 
 .container {
   margin: 0 auto;
-  max-width: 1280px;
+  padding: 0 40px;
+  width: 1280px;
+  /* outline: 2px solid green; */
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .container {
+    padding: 0 30px;
+    width: 100%;
+    /* outline: 2px solid red; */
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+    padding: 0 30px;
+    /* outline: 2px solid blue; */
+  }
 }
 
 .title {
@@ -45,19 +63,31 @@ html {
 
 
 /****************
+START SCREEN
+****************/
+.start-screen {
+  padding-top: 60px;
+  height: 908px;
+  background-image: url(../../assets/images/start-screen-gradient-background.png);
+  background-size: cover;
+}
+
+@media (max-width: 1279px) {
+  .start-screen {
+    padding-top: 30px;
+    height: 1165px;
+  }
+}
+
+
+/****************
 HEADER
 ****************/
 .header {
-  padding-top: 60px;
-  height: 120px;
-}
-
-.header-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 0 40px;
 }
 
 .logo {
@@ -94,15 +124,20 @@ HEADER
 .nav-ul {
   display: flex;
   flex-direction: row;
-  justify-content: end;
-  column-gap: 35px;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 36px;
+  margin-top: -3px;
+  width: 445px;
+  height: 27px;
 }
 
 .nav-li {
   list-style: none;
 }
 
-.nav-li a {
+.nav-a {
+  padding-bottom: 4px;
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -112,12 +147,12 @@ HEADER
   text-decoration: none;
 }
 
-.nav-li a.active {
+.nav-a.active {
   border-bottom: 3px solid var(--primary);
   color: var(--light-s);
 }
 
-.nav-li a:hover {
+.nav-a:hover {
   color: var(--light-s);
 }
 
@@ -126,22 +161,34 @@ HEADER
 START
 ****************/
 .start {
-  height: 908px;
-  background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(0deg, #211F20, #211F20);
-}
-
-.start-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: -120px;
-  padding: 180px 40px 0 40px;
+  flex-wrap: wrap;
+  row-gap: 100px;
+  margin: 0 auto;
+  padding-top: 60px;
+  height: 728px;
+}
+
+@media (max-width: 1279px) {
+  .start {
+    padding-top: 60px;
+    width: 569px;
+    height: 1015px;
+  }
 }
 
 .start-content-text {
   margin-top: 163px;
   width: 460px;
   height: 322px;
+}
+
+@media (max-width: 1279px) {
+  .start-content-text {
+    margin: 0 auto;
+  }
 }
 
 .start-title {
@@ -178,6 +225,12 @@ START
   cursor: pointer;
 }
 
+@media (max-width: 1279px) {
+  .start-btn {
+    margin: 0 auto;
+  }
+}
+
 .start-btn:hover {
   background-color: var(--primary-light);
 }
@@ -188,14 +241,35 @@ START
   background-image: url(../../assets/images/start-screen-puppy.png);
 }
 
+@media (max-width: 1279px) {
+  .start-content-img {
+    margin-left: 70px;
+    margin-right: -70px;
+    width: 569px;
+    height: 593px;
+    background-size: cover;
+  }
+}
+
+
+/****************
+MAIN
+****************/
+
 
 /****************
 ABOUT
 ****************/
 .about {
-  padding-top: 80px;
+  padding: 80px 0 100px 0;
   height: 588px;
   background-color: var(--light-xl);
+}
+
+@media (max-width: 1279px) {
+  .about {
+    height: 1048px;
+  }
 }
 
 .about-content {
@@ -203,12 +277,18 @@ ABOUT
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 0 40px 100px 40px;
+  padding: 0 175px;
+}
+
+@media (max-width: 1279px) {
+  .about-content {
+    flex-direction: column-reverse;
+    row-gap: 80px;
+  }
 }
 
 .about-content-img {
   display: block;
-  margin-left: 175px;
   width: 300px;
   height: 408px;
 }
@@ -217,7 +297,6 @@ ABOUT
   display: flex;
   flex-direction: column;
   gap: 25px;
-  margin-right: 175px;
   width: 430px;
   height: 380px;
 }
@@ -240,14 +319,12 @@ ABOUT
 PETS
 ****************/
 .pets {
-  padding-top: 80px;
+  padding: 80px 0 100px 0;
   height: 877px;
   background-color: var(--light-l);
 }
 
 .pets-content {
-  margin: 0 40px 100px 40px;
-  width: 1200px;
   height: 697px;
 }
 
@@ -264,14 +341,6 @@ PETS
   justify-content: space-between;
   align-items: center;
   margin: 60px 0;
-}
-
-.slider {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 990px;
 }
 
 .arrow {
@@ -294,6 +363,21 @@ PETS
 
 .arrow-right {
   background-image: url(../../assets/svg/arrow-right.svg);
+}
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 990px;
+}
+
+@media (max-width: 1279px) {
+  .slider {
+    margin: 0 12px;
+    width: 580px;
+  }
 }
 
 .card {
@@ -344,6 +428,12 @@ PETS
   background-color: var(--primary);
 }
 
+@media (max-width: 1279px) {
+  .card3 {
+    display: none;
+  }
+}
+
 .pets-btn {
   display: block;
   margin: 0 auto;
@@ -364,15 +454,27 @@ PETS
 HELP
 ****************/
 .help {
-  padding-top: 80px;
+  padding: 80px 0 100px 0;
   height: 611px;
   background-color: var(--light-xl);
 }
 
+@media (max-width: 1279px) {
+  .help {
+    margin: 0 auto;
+    width: 768px;
+    height: 779px;
+  }
+}
+
 .help-content {
-  margin: 0 40px 100px 40px;
-  width: 1200px;
   height: 431px;
+}
+
+@media (max-width: 1279px) {
+  .help-content {
+    height: 599px;
+  }
 }
 
 .help-title {
@@ -387,8 +489,22 @@ HELP
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 55px 120px;
-  margin: 60px 85px;
+  row-gap: 55px;
+  column-gap: 120px;
+  margin-top: 60px;
+}
+
+@media (max-width: 1279px) {
+  .help-list {
+    column-gap: 60px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .help-item {
+    width: 170px;
+    height: 113px;
+  }
 }
 
 .help-img {
@@ -410,27 +526,44 @@ HELP
 DONATION
 ****************/
 .donation {
-  padding-top: 80px;
+  padding: 80px 0 100px 0;
   height: 462px;
   background-color: var(--light-l);
+}
+
+@media (max-width: 1279px) {
+  .donation {
+    height: 783px;
+  }
 }
 
 .donation-content {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  gap: 30px;
+  justify-content: center;
+  column-gap: 30px;
   align-items: center;
-  margin: 0 auto 100px;
-  width: 915px;
-  height: 282px;
+}
+
+@media (max-width: 1279px) {
+  .donation-content {
+    flex-direction: column-reverse;
+    row-gap: 60px;
+  }
+}
+
+.donation-content-img {
+  width: 505px;
+  height: 261px;
 }
 
 .donation-content-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  row-gap: 20px;
+  width: 380px;
+  height: 282px;
 }
 
 .donation {
@@ -481,28 +614,71 @@ DONATION
 FOOTER
 ****************/
 .footer {
-  padding-top: 40px;
+  padding: 40px 40px 0 40px;
   height: 350px;
-  background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
-  linear-gradient(0deg, #211F20, #211F20);
+  background-image: url(../../assets/images/footer-gradient-background.png);
+  background-size: cover;
+}
+
+@media (max-width: 1279px) {
+  .footer {
+    padding: 30px 30px 0 30px;
+    height: 639px;
+  }
 }
 
 .footer-content {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin: 0 auto;
-  width: 1200px;
-  height: 310px;
+  justify-content: flex-start;
+  column-gap: 160px;
+}
+
+@media (max-width: 1279px) {
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 65px;
+  }
 }
 
 .footer-contacts {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  column-gap: 160px;
+  padding-top: 16px;
+  height: 234px;
+}
+
+@media (max-width: 1279px) {
+  .footer-contacts {
+    padding-top: 0;
+    column-gap: 60px;
+  }
+}
+
+.footer-contacts-left {
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 16px;
   height: 234px;
-  max-width: 300px;
+  width: 278px;
+}
+
+.footer-contacts-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 234px;
+  width: 302px;
+}
+
+@media (max-width: 1279px) {
+  .footer-contacts {
+    margin-top: 0;
+  }
 }
 
 .footer-title {
@@ -525,4 +701,10 @@ FOOTER
   line-height: 2.3rem;
   letter-spacing: 0.06em;
   color: var(--primary);
+}
+
+.footer-img {
+  display: block;
+  width: 300px;
+  height: 310px;
 }

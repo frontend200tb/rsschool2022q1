@@ -15,12 +15,14 @@
 <noscript>Ваш браузер не поддерживает Javascript</noscript>
 <div class="page">
 
-
-  <!-------------------- HEADER --------------------->
-  <header class="header">
+  
+  <!-------------------- START SCREEN ---------------->
+  <section class="start-screen">
     <div class="container">
-      <div class="header-content">
 
+
+      <!-------------------- HEADER --------------------->
+      <header class="header">
         <div class="logo">
           <h1 class="logo-title">Cozy House</h1>
           <div class="logo-subtitle">Shelter for pets in Boston</div>
@@ -29,48 +31,46 @@
         <nav class="nav">
           <ul class="nav-ul">
             <li class="nav-li">
-              <a href="../main/index.html" class="active">About the shelter</a>
+              <a href="../main/index.html" class="nav-a active">About the shelter</a>
             </li>
             <li class="nav-li">
-              <a href="../pets/index.html">Our pets</a>
+              <a href="../pets/index.html" class="nav-a">Our pets</a>
             </li>
             <li class="nav-li">
-              <a href="#help">Help the shelter</a>
+              <a href="#help" class="nav-a">Help the shelter</a>
             </li>
             <li class="nav-li">
-              <a href="#footer">Contacts</a>
+              <a href="#footer" class="nav-a">Contacts</a>
             </li>
           </ul>
         </nav>
+      </header>
+      <!-------------------- /HEADER --------------------->
 
-      </div>
+
+      <!-------------------- START --------------------->
+      <section class="start">
+        <div class="start-content-text">
+
+          <h2 class="start-title">Not only people need a house</h2>
+
+          <p class="start-text">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
+
+          <a href="#pets" class="start-btn">Make a friend</a>
+
+        </div>
+
+        <div class="start-content-img"></div>
+      </section>
+      <!-------------------- /START --------------------->
+
     </div>
-  </header>
-  <!-------------------- /HEADER --------------------->
+  </section>
+  <!-------------------- /START SCREEN ---------------->
+
 
   <!-------------------- MAIN --------------------->
   <main class="main">
-
-    <!-------------------- START --------------------->
-    <section class="start">
-      <div class="container">
-        <div class="start-content">
-          <div class="start-content-text">
-
-            <h2 class="start-title">Not only people need a house</h2>
-
-            <p class="start-text">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
-
-            <a href="#pets" class="start-btn">Make a friend</a>
-
-          </div>
-
-          <div class="start-content-img"></div>
-        </div>
-      </div>
-    </section>
-    <!-------------------- /START --------------------->
-
     <!-------------------- ABOUT --------------------->
     <section class="about">
       <div class="container">
@@ -114,7 +114,7 @@
                 <button class="card-btn">Learn more</button>
               </div>
 
-              <div class="card">
+              <div class="card card3">
                 <img src="../../assets/images/pets-woody.png" alt="Woody" class="card-img">
                 <div class="card-name">Woody</div>
                 <button class="card-btn">Learn more</button>
@@ -220,33 +220,37 @@
 
         <div class="footer-contacts">
 
-          <h2 class="title footer-title">For questions and suggestions</h2>
+          <div class="footer-contacts-left">
 
-          <a href="mailto:email@shelter.com" class="contact">
-            <img src="../../assets/svg/icon-email.svg" alt="email" class="contact-img">
-            <div class="contact-text">email@shelter.com</div>
-          </a>
+            <h2 class="title footer-title">For questions and suggestions</h2>
 
-          <a href="tel:+136745677554" class="contact">
-            <img src="../../assets/svg/icon-phone.svg" alt="tel" class="contact-img">
-            <div class="contact-text">+13 674 567 75 54</div>
-          </a>
+            <a href="mailto:email@shelter.com" class="contact">
+              <img src="../../assets/svg/icon-email.svg" alt="email" class="contact-img">
+              <div class="contact-text">email@shelter.com</div>
+            </a>
 
-        </div>
+            <a href="tel:+136745677554" class="contact">
+              <img src="../../assets/svg/icon-phone.svg" alt="tel" class="contact-img">
+              <div class="contact-text">+13 674 567 75 54</div>
+            </a>
 
-        <div class="footer-contacts">
+          </div>
 
-          <h2 class="title footer-title">We are waiting for your visit</h2>
+          <div class="footer-contacts-right">
 
-          <a href="https://goo.gl/maps/tNUWfyZ5VaubiEQaA" class="contact" target="_blank">
-            <img src="../../assets/svg/icon-marker.svg" alt="email" class="contact-img">
-            <div class="contact-text">1 Central Street, Boston (entrance from the store)</div>
-          </a>
+            <h2 class="title footer-title">We are waiting for your visit</h2>
 
-          <a href="https://goo.gl/maps/tNUWfyZ5VaubiEQaA" class="contact" target="_blank">
-            <img src="../../assets/svg/icon-marker.svg" alt="email" class="contact-img">
-            <div class="contact-text">18 South Park, London</div>
-          </a>
+            <a href="https://goo.gl/maps/tNUWfyZ5VaubiEQaA" class="contact" target="_blank">
+              <img src="../../assets/svg/icon-marker.svg" alt="email" class="contact-img">
+              <div class="contact-text">1 Central Street, Boston (entrance from the store)</div>
+            </a>
+
+            <a href="https://goo.gl/maps/tNUWfyZ5VaubiEQaA" class="contact" target="_blank">
+              <img src="../../assets/svg/icon-marker.svg" alt="email" class="contact-img">
+              <div class="contact-text">18 South Park, London</div>
+            </a>
+
+          </div>
 
         </div>
 
