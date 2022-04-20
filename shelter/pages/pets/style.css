@@ -42,9 +42,9 @@ html {
   }
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .container {
-    padding: 0 30px;
+    padding: 0 10px;
     width: 100%;
   }
 }
@@ -273,6 +273,12 @@ PETS
   color: var(--dark-l);
 }
 
+@media (max-width: 767px) {
+  .pets-title {
+    width: 300px;
+  }
+}
+
 .cards-container {
   display: flex;
   flex-direction: row;
@@ -363,10 +369,17 @@ PETS
 .card-nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   gap: 20px;
   margin: 0 auto;
   width: 340px;
+}
+
+@media (max-width: 767px) {
+  .card-nav {
+    gap: 10px;
+    width: 300px;
+  }
 }
 
 .arrow {
