@@ -1007,6 +1007,12 @@ FOOTER
   color: var(--light-l);
 }
 
+@media (max-width: 767px) {
+  .footer-title {
+    text-align: center;
+  }
+}
+
 .contact {
   display: flex;
   flex-direction: row;
