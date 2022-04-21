@@ -156,7 +156,7 @@ HEADER
   align-items: center;
   column-gap: 36px;
   margin: 0 0 5px 0;
-  width: 445px;
+  max-width: 445px;
   height: 27px;
 }
 
@@ -691,7 +691,6 @@ HELP
 @media (max-width: 767px) {
   .help {
     padding: 42px 0;
-    width: 400px;
     height: 745px;
   }
 }
@@ -855,6 +854,7 @@ DONATION
 
 @media (max-width: 767px) {
   .donation-content-text {
+    width: 300px;
     align-items: center;
   }
 }
@@ -884,6 +884,12 @@ DONATION
   background-color: var(--primary);
 }
 
+@media (max-width: 767px) {
+  .credit-card {
+    width: 281px;
+  }
+}
+
 .credit-card-img {
   margin-left: 15px;
 }
@@ -894,6 +900,12 @@ DONATION
   line-height: 115%;
   letter-spacing: 0.06em;  
   color: var(--dark-l);
+}
+
+@media (max-width: 767px) {
+  .credit-card-text {
+    font-size: 1.5rem;
+  }
 }
 
 .donation-info {
